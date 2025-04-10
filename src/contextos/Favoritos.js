@@ -18,19 +18,31 @@ export default function FavoritosProvider({ children }) {
 export function useFavoritoContext() {
     const { favorito, setFavorito } = useContext(FavoritosContext);
 
+    // function adicionarFavorito(novoFavorito) {
+    //     const favoritoRepetido = favorito.some(item => item.id === novoFavorito.id)
+
+    //     let novaLista = [...favorito];
+
+    //     if (!favoritoRepetido) {
+    //         novaLista.push(novoFavorito);
+    //         return setFavorito(novaLista);
+    //     }
+
+    //     novaLista.splice(novaLista.indexOf(novoFavorito), 1);
+    //     return setFavorito(novaLista);       
+    // }
+
     function adicionarFavorito(novoFavorito) {
-        const favoritoRepetido = favorito.some(item => item.id === novoFavorito.id)
-
-        let novaLista = [...favorito];
-
+        const favoritoRepetido = favorito.some(item => item.id === novoFavorito.id);
+    
         if (!favoritoRepetido) {
-            novaLista.push(novoFavorito);
-            return setFavorito(novaLista);
+            return setFavorito([...favorito, novoFavorito]);
         }
-
-        novaLista.splice(novaLista.indexOf(novoFavorito), 1);
-        return setFavorito(novaLista);       
+    
+        const novaLista = favorito.filter(item => item.id !== novoFavorito.id);
+        return setFavorito(novaLista);
     }
+    
 
     return {
         favorito,
