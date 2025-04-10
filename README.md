@@ -1,3 +1,37 @@
+# 🎬 Projeto de Vídeos em React
+
+Este projeto é uma prática de React com JavaScript, explorando conceitos importantes como **hooks** (`useState`, `useParams`, `useEffect`, `useContext`) e a criação de rotas e estados globais em uma aplicação interativa.
+
+## 📌 Funcionalidades
+
+- Exibição de uma **galeria de vídeos** com banners na página principal.
+- Ao **clicar em um banner**, o usuário é redirecionado para uma página com o **vídeo para assistir**.
+- É possível **favoritar vídeos** diretamente da galeria.
+- Os vídeos favoritos são salvos e exibidos na **página "Favoritos"**.
+- Navegação entre páginas via **menu** no topo da tela com as opções:
+  - `🏠 Home`
+  - `⭐ Favoritos`
+
+## 🚀 Tecnologias Utilizadas
+
+- **React**
+- **JavaScript**
+- **React Router DOM**
+- **Hooks:**
+  - `useState`
+  - `useParams`
+  - `useEffect`
+  - `useContext`
+- **Styled Components**
+
+## 🧠 Objetivo
+
+Este projeto foi desenvolvido como prática para reforçar conhecimentos em React e a manipulação de estados locais e globais, navegação com rotas dinâmicas e organização de componentes em uma aplicação com interface interativa.
+
+---
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
